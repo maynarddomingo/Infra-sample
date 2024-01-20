@@ -6,10 +6,3 @@ resource "aws_instance" "one" {
   }
 }
 
-resource "aws_instance" "two" {
-  ami           = "ami-0c7217cdde317cfec" # us-west-2
-  instance_type = "t2.micro"
-  tags = {
-      Name = "TF-Instance1"
-  }
-}
