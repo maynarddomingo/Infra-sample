@@ -1,8 +1,8 @@
-variable "instance_type" { 
-    description = "instance type for ec2" 
-    default     =  "t2.micro" 
-}
-variable "ami_id" { 
-    description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-05fa00d4c63e32376" 
-}
+resource "aws_instance" "mySonarInstance" {
+      ami           = var.ami_id
+      instance_type = var.instance_type
+      #vpc_security_group_ids = [aws_security_group.sonar-sg-2022.id]
+      tags= {
+        Name = "sonar_instance"
+      }
+    }
