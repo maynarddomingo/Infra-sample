@@ -6,7 +6,7 @@
 
 terraform {
   backend "s3" {
-    bucket                  = "terraform-s3-state-0223"
+    bucket                  = "maynarddomingotfstatebucket"
     key                     = "my-terraform-project"
     region                  = "us-east-1"
 //    shared_credentials_file = "~/.aws/credentials"
